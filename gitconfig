@@ -1,0 +1,7 @@
+[user]
+	name = Charles Ma
+	email = chuckjma@gmail.com
+[alias]
+	st = status
+	b = branch
+	co = checkout
