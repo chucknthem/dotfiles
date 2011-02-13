@@ -99,12 +99,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH=$PATH:/opt/os161/bin
-export TOOLROOT=$HOME/cs3231/os161/tools
-export PATH=$PATH:$TOOLROOT/bin
-
-WEKAHOME=/home/charles/cs9417/weka-3-6-2
-export WEKAHOME
-CLASSPATH="$CLASSPATH:$WEKAHOME/weka.jar"
-export CLASSPATH
 
