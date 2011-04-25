@@ -2,6 +2,7 @@
    name = Charles Ma
    email = chuckjma@gmail.com
 [alias]
+   a = add
    st = status
    b = branch
    co = checkout
