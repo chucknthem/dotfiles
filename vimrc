@@ -1,11 +1,18 @@
 set nocompatible
 syntax on
-set tabstop=3
-set shiftwidth=3
+set tw=2 sw=2 tw=80 ai smarttab
 highlight comment ctermfg=2
 set expandtab
 
-"set mouse=a
+" keep 3 lines from the edge of the screen
+set so=3
+
+set modeline
+set modelines=3
+
+" enable mouse mode
+" set mouse=a
+
 " backspace doesn't work the way it should in some versions of vim
 " this fixes it.
 set backspace=indent,eol,start
@@ -20,21 +27,38 @@ if has("autocmd")
 	filetype plugin indent on
 endif
 
+" auto complete
+set completeopt=longest,menuone
+set path=.,/usr/include,/usr/include/*
+
 "draws a line under the cursor
 set cursorline
+
 "show row and column number
 set ruler
 
+" show line numbers
+" set number
 
+
+" If a space is missing after a // comment in c++ file, highlight it red.
 autocmd Filetype cpp highlight MissingSpace ctermbg=red guibg=red
 autocmd Filetype cpp match MissingSpace "[/][/][^ ]"
 autocmd Filetype cpp 3match MissingSpace "[^ ][ ][/][/]"
 
+" Highlight extra whitespace at the end of lines in cpp files.
 autocmd Filetype cpp highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 autocmd Filetype cpp 2match ExtraWhitespace /\s\+$/
 
 " read .tem files as .cpp files
 au BufNewFile,BufRead *.tem	set ft=cpp
+
+" Prevent F1 from showing :h
+nmap <F1> <nop>
+imap <F1> <nop>
+
+" Expand #i to #include and #d to #define in c and cpp files.
+au FileType c,cpp iab #i #include| iab #d #define| set foldmethod=marker
 
 
 " :help ft-vim-syntax <- docs on how to configure the syntax highligher
