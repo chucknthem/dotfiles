@@ -11,7 +11,7 @@
    ci = commit
    up = pull
    d = diff
-	sum = log --stat --summary
+	 sum = log --stat --summary
 [color]
    diff = auto 
    status = auto

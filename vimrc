@@ -1,8 +1,23 @@
+" set utf-8 encoding
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+
+" don't emulate old vi bugs
 set nocompatible
+
+" use indentation of previous line
+set autoindent
+set smartindent
+
 syntax on
-set tw=2 sw=2 tw=80 ai smarttab
+set sw=2 ai smarttab
+set tabstop=2
 highlight comment ctermfg=2
 set expandtab
+
+" auto line wrap
+" set textwidth=120
 
 " keep 3 lines from the edge of the screen
 set so=3
