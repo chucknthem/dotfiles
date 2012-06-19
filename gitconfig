@@ -1,23 +1,24 @@
 [user]
-   name = Charles Ma
-   email = chuckjma@gmail.com
+  name = Charles Ma
+  email = chuckjma@gmail.com
 [alias]
-   a = add
-   st = status
-   b = branch
-   co = checkout
-   cl = clone
-   m = merge
-   ci = commit
-   up = pull
-   d = diff
-	 sum = log --stat --summary
+  a = add
+  st = status
+  b = branch
+  co = checkout
+  cl = clone
+  m = merge
+  ci = commit
+  up = pull
+  d = diff
+  sum = log --stat --summary
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [color]
-   diff = auto 
-   status = auto
-   branch = auto
-   interactive = auto
-   ui = true
-   pager = true
+  diff = auto 
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 [http]
 	sslVerify = off
