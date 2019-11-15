@@ -27,3 +27,5 @@
   pager = true
 [http]
   sslVerify = off
+[core]
+  editor = vim
