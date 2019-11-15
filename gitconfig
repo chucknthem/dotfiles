@@ -4,17 +4,20 @@
 [alias]
   a = add
   aa = commit --amend -a
-  st = status
   b = branch
+  ba = branch --abort
+  bc = branch --continue
   co = checkout
   cl = clone
-  m = merge
+  d = diff
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
   ci = commit
   cia = commit -a
-  up = pull
-  d = diff
+  m = merge
+  pr = pull --rebase
+  st = status
   sum = log --stat --summary
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  up = pull
 [color]
   diff = auto 
   status = auto
