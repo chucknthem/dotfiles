@@ -12,6 +12,7 @@
 	b = branch
 	ba = branch --abort
 	bc = branch --continue
+	cb = "!f() { git checkout -b \"$1\" --track origin/master; }; f"
 	co = checkout
 	cl = clone
 	d = diff
