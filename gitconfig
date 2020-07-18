@@ -1,31 +1,36 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [user]
-  name = Charles Ma
-  email = chuckjma@gmail.com
+	name = Charles Ma
+	email = chuckjma@gmail.com
 [alias]
-  a = add
-  aa = commit --amend -a
-  b = branch
-  ba = branch --abort
-  bc = branch --continue
-  co = checkout
-  cl = clone
-  d = diff
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  ci = commit
-  cia = commit -a
-  m = merge
-  pr = pull --rebase
-  st = status
-  sum = log --stat --summary
-  up = pull
+	a = add
+	aa = commit --amend -a
+	b = branch
+	ba = branch --abort
+	bc = branch --continue
+	co = checkout
+	cl = clone
+	d = diff
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	ci = commit
+	cia = commit -a
+	m = merge
+	pr = pull --rebase
+	st = status
+	sum = log --stat --summary
+	up = pull
 [color]
-  diff = auto 
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = true
-  pager = true
-[http]
-  sslVerify = off
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
 [core]
-  editor = vim
+	editor = vim
+[url "git@github.com:"]
+	insteadOf = https://github.com/
