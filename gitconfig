@@ -21,7 +21,9 @@
 	cia = commit -a
 	m = merge
 	pr = pull --rebase
+  rc = rebase --continue
 	st = status
+	s = diff --stat
 	sum = log --stat --summary
 	up = pull
 [color]
@@ -35,3 +37,5 @@
 	editor = vim
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[hub]
+	protocol = ssh
